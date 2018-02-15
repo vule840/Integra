@@ -20,6 +20,7 @@ function theme_enqueue_styles() {
 	wp_enqueue_script( 'popper-scripts', get_template_directory_uri() . '/js/popper.min.js', array(), false);
     wp_enqueue_script( 'child-understrap-scripts', get_stylesheet_directory_uri() . '/js/child-theme.min.js', array(), $the_theme->get( 'Version' ), true );
     wp_enqueue_script( 'anime', 'https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.js', array(), $the_theme->get( 'Version' ), true );
+    wp_enqueue_script( 'scroll-trigger', get_stylesheet_directory_uri() . '/js/ScrollTrigger.min.js', array(), $the_theme->get( 'Version' ), true );
     wp_enqueue_script( 'child-understrap-scripts-custom', get_stylesheet_directory_uri() . '/js/child-theme-custom.js', array(), $the_theme->get( 'Version' ), true );
     if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
         wp_enqueue_script( 'comment-reply' );

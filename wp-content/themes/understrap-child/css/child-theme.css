@@ -9486,6 +9486,9 @@ a.skip-link {
 body {
   height: 2000px; }
 
+.wrapper {
+  padding: 0; }
+
 #cssSelector {
   background: red;
   position: relative; }
@@ -9548,3 +9551,32 @@ progress {
   height: 1em;
   border: none;
   background: transparent; }
+
+#vizija .centriran {
+  max-width: 50%; }
+
+#vizija .centar {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+/*********************************/
+.fromTopIn {
+  transition: transform 1.0s ease, opacity 1.0s ease;
+  transform: translate(0, 0);
+  opacity: 1.0; }
+
+.fromTopOut {
+  transition: transform 1.0s ease, opacity 1.0s ease;
+  transform: translate(0, -10px);
+  opacity: 0.0; }
+
+.fromBottomIn {
+  transition: transform 1.0s ease, opacity 1.0s ease;
+  transform: translate(0, 0);
+  opacity: 1.0; }
+
+.fromBottomOut {
+  transition: transform 1.0s ease, opacity 1.0s ease;
+  transform: translate(0, 10px);
+  opacity: 0.0; }

@@ -73,8 +73,70 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc lobortis elit at tortor sagittis dictum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc lobortis elit at tortor sagittis dictum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc lobortis elit at tortor sagittis dictum. </p>
 					<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nunc lobortis elit at tortor sagittis dictum. </p>
+					<!-- SLIDER POČETAK -->
+<?php 
 
+					$posts = get_posts(array(
+						'posts_per_page'	=> 4,
+						'post_type'			=> 'post'
+					));
+
+					if( $posts ): ?>
+						
+						<div class="single-item">
+							
+						<?php foreach( $posts as $post ): 
+							
+							setup_postdata( $post );
+							
+							?>
+								
+
+								<?php 
+
+					$posts = get_posts(array(
+						'posts_per_page'	=> 2,
+						'post_type'			=> 'post',
+						'category'         => 31,
+					));
+
+					if( $posts ): ?>
+						
+						
+							
+						<?php foreach( $posts as $post ): 
+							
+							setup_postdata( $post );
+							
+							?>
+							<div>
+								<?php the_post_thumbnail(); ?>
+								<p><h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2></p>
+								<p><?php the_excerpt(); ?></p>
+								</div>	
+						
+						
+						<?php endforeach; ?>
+						
+						
+						
+						<?php wp_reset_postdata(); ?>
+
+					<?php endif; ?>
+						
+						<?php endforeach; ?>
+						
+						</div>
+						
+						<?php wp_reset_postdata(); ?>
+
+					<?php endif; ?>
+
+					<!-- SLIDER -END -->
+		
 				</div>
+
+					
 				
 		
 				</div>
@@ -85,8 +147,9 @@ $container = get_theme_mod( 'understrap_container_type' );
 	</div>	
 
 		<!-- BOXES -->
+			
 
-		
+
 						<div id="update">
 						  <div class="logs"> <input class="log current-time-log"> <input class="log progress-log"> </div>
 						  <div class="large square el"></div>

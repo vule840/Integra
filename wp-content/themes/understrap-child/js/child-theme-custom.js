@@ -94,6 +94,14 @@ document.addEventListener("DOMContentLoaded", function() {
 		addHeight: true
 	});
 });
+
+jQuery(document).ready(function($) {
+	$(".single-item").slick({
+		dots: true,
+		autoplay: true
+	});
+});
+
 /*document.querySelector("body").onmouseover = playPause.play;
 document.querySelector("body").onclick = playPause.reverse;*/
 

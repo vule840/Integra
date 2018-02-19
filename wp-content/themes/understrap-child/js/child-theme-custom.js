@@ -95,10 +95,41 @@ document.addEventListener("DOMContentLoaded", function() {
 	});
 });
 
+
+
+var finishedPromise = anime({
+  targets: '#Capa_1 .krumpirici',
+  translateY: [
+  {value:-100, duration: 500},
+  {value:0, duration: 500},
+  ],
+  opacity: [
+  {value:0, duration: 500},
+  {value:1, duration: 500},
+  ],
+ 
+  delay: function(el, i, l) {
+    return i * 2000;
+  }
+});
+
+var promise = finishedPromise.finished.then(logFinished);
+
+function logFinished() {
+	console.log("gotvo");
+}
+
 jQuery(document).ready(function($) {
 	$(".single-item").slick({
 		dots: true,
-		autoplay: true
+		autoplay: true,
+		infinite: true,
+  slidesToShow: 3,
+  slidesToScroll: 3,
+  centerPadding: '50px',
+
+  
+
 	});
 });
 

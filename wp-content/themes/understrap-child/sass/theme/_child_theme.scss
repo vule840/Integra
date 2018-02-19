@@ -450,3 +450,43 @@ progress {
 .slick-arrow.slick-hidden {
     display: none;
 }
+
+
+
+/**********  POMFRI  ********/
+g#pet .st3 {
+	display: none;
+}
+
+
+/*svg#Capa_1 g {
+    animation: fade 1s linear infinite;
+    animation-delay: 2s;
+}
+
+@keyframes fade{
+  from{
+    opacity:0;
+  }
+  to{
+    opacity:1;
+    
+  }
+}*/
+
+
+
+.slick-slide{
+  padding: 1em;
+}
+
+.naslov{
+	position: relative;
+	top: -85px;
+	
+}
+.naslov a{
+	color: white;
+	font-size: 0.7em;
+	padding-left: 0.5em;
+} 
